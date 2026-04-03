@@ -81,8 +81,8 @@ CONFIG = {
     "reason":          "Others",
     "remarks":         "Others",
     "current_place":   "Bangalore",
-    "current_pincode": "562109",
-    "approx_distance": "6",
+    "current_pincode": "123456",
+    "approx_distance": "123",
 }
 ```
 
