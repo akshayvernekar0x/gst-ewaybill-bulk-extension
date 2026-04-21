@@ -76,9 +76,9 @@ CONFIG = {
 }
 
 # ── v5-4: Fallback defaults if Excel columns are absent ──
-DEFAULT_PLACE    = "Bidadi"
-DEFAULT_PINCODE  = "562109"
-DEFAULT_DISTANCE = "6"
+DEFAULT_PLACE    = "Banglore"
+DEFAULT_PINCODE  = "12345"
+DEFAULT_DISTANCE = "100"
 
 LOGIN_URL  = "https://ewaybillgst.gov.in/Login.aspx"
 EXTEND_URL = "https://ewaybillgst.gov.in/BillGeneration/EwbExtension.aspx"
