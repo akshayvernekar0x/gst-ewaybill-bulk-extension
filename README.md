@@ -194,16 +194,7 @@ debug_*.png                   ← Debug screenshots (first bill only)
 To distribute as a standalone Windows EXE (no Python needed on user's PC):
 
 ```bash
-pyinstaller --onefile --noconsole --icon=logo.ico --add-data "logo.ico;." ^
-  --hidden-import=selenium ^
-  --hidden-import=webdriver_manager ^
-  --hidden-import=webdriver_manager.chrome ^
-  --hidden-import=webdriver_manager.core.os_manager ^
-  --hidden-import=pkg_resources ^
-  --hidden-import=tkinter ^
-  --hidden-import=openpyxl ^
-  --hidden-import=requests ^
-  ewaybill_v6_0.py
+pyinstaller --onefile --noconsole --icon=logo.ico --add-data "logo.ico;." --hidden-import=selenium --hidden-import=selenium.webdriver --hidden-import=selenium.webdriver.chrome --hidden-import=selenium.webdriver.chrome.webdriver --hidden-import=selenium.webdriver.chrome.service --hidden-import=selenium.webdriver.chrome.options --hidden-import=selenium.webdriver.common.service --hidden-import=selenium.webdriver.remote.webdriver --hidden-import=selenium.webdriver.support.ui --hidden-import=selenium.webdriver.support.expected_conditions --hidden-import=webdriver_manager --hidden-import=webdriver_manager.chrome --hidden-import=webdriver_manager.core.os_manager --hidden-import=pkg_resources --hidden-import=tkinter --hidden-import=openpyxl --hidden-import=requests ewaybill_v6_0.py
 ```
 
 The built EXE will be in the `dist/` folder.
