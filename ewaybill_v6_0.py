@@ -1249,8 +1249,28 @@ class EWBApp:
 # MAIN
 # ─────────────────────────────────────────────
 def main():
+    # Fix taskbar icon on Windows
+    try:
+        import ctypes
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+            "Akshay.GSTEwayBill.v6"
+        )
+    except Exception:
+        pass
+
     root = tk.Tk()
-    app  = EWBApp(root)
+
+    # Set window icon
+    try:
+        if getattr(sys, "frozen", False):
+            icon_path = os.path.join(sys._MEIPASS, "logo.ico")
+        else:
+            icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logo.ico")
+        root.iconbitmap(icon_path)
+    except Exception:
+        pass
+
+    app = EWBApp(root)
     root.mainloop()
 
 if __name__ == "__main__":
